@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.czlyj.spring.mapper.UserMapper">
+    <select id="findAll" resultType="com.czlyj.spring.bean.User">
+      select * from users
+  </select>
+    
+    <select id="find" resultType="com.czlyj.spring.bean.User">
+      select * from users where id = #{id}
+    </select>
+
+  <select id="count" resultType="int">
+    select count(*) from users;
+  </select>
+</mapper>
